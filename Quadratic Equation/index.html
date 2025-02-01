@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadratic Equations</title>
+    <link rel="icon" href="book.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <table width="100%" border="0" style="text-align: center;">
+        <tr>
+            <td rowspan="2"><a id="contact" target="_blank" href="https://wa.me/6287776810645/?text=I%20like%20your%20project!" style="text-decoration: none; color: black; position: relative; right: 5dvh;">Contact</a></td>
+            <th><h1 style="position: relative; right: 5dvh;">Quadratic Equations</h1></th>
+            <td rowspan="2"><a id="mode" onclick="mode()">Dark</a></td>
+        </tr>
+        <tr><td><br></td></tr>
+        <tr>
+            <td colspan="6"><a id="follow" target="_blank" href="https://www.instagram.com/akufaisal._" style="text-decoration: none; color: black;"><em>Follow for more!</em></a></td>
+        </tr>
+    </table>
+    <hr><br>
+
+    <label for="cboInputBy"><h4 style="display: inline;">Input : </h4></label>
+    <select name="cboInputBy" id="combo" onchange="changeInputBy()">
+        <option value="byValues">By Values</option>
+        <option value="byRoots">By Roots</option>
+    </select>
+    <br><br>
+
+    <table>
+        <tr>
+            <th colspan="6">Equations</th>
+        </tr>
+        <tr>
+            <td colspan="3"><hr></td>
+        </tr>
+        <tr>
+            <td colspan="3" rowspan="1">
+                <textarea title="Copy to Clipboard" readonly name="quadraticEquations" onclick="copyToClipboard()" id="quadraticEquations">1x² + 0x + 0 = 0</textarea>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3"><br></td>
+        </tr>
+        <tr>
+            <th colspan="3">Values</th>
+        </tr>
+        <tr>
+            <td colspan="3"><hr></td>
+        </tr>
+        <tr style="font-weight: 550;">
+            <td>a</td>
+            <td>b</td>
+            <td>c</td>
+        </tr>
+        <tr>
+            <td colspan="1">
+                <input type="text" oninput="update(a)" name="valueA" id="valueA" value="1">
+            </td>
+            <td colspan="1">
+                <input type="text" oninput="update(b)" name="valueB" id="valueB" value="0">
+            </td>
+            <td colspan="1">
+                <input type="text" oninput="update(c)" name="valueC" id="valueC" value="0">
+            </td>
+        </tr>
+        <tr>
+            <td><button class="negate-values" onclick="negate('valueA')">NEGATE</button></td>
+            <td><button class="negate-values" onclick="negate('valueB')">NEGATE</button></td>
+            <td><button class="negate-values" onclick="negate('valueC')">NEGATE</button></td>
+        </tr>
+        <tr>
+            <td colspan="3"><br></td>
+        </tr>
+        <tr>
+            <th colspan="3">Roots</th>
+        </tr>
+        <tr>
+            <td colspan="3"><hr></td>
+        </tr>
+        <tr style="font-weight: 550;">
+            <td>x<sub>1</sub></td>
+            <td></td>
+            <td>x<sub>2</sub></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" name="root1" id="root1" value="0">
+            </td>
+            <td>
+            </td>
+            <td>
+                <input type="text" name="root2" id="root2" value="0">
+            </td>
+        </tr>
+        <tr>
+            <td><button class="negate-roots" disabled onclick="negate('root1')">NEGATE</button></td>
+            <td></td>
+            <td><button class="negate-roots" disabled onclick="negate('root2')">NEGATE</button></td>
+        </tr>
+        <tr>
+            <td colspan="3"><br></td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <button onclick="let r = confirm('Are you sure you want to clear the values? \nThis action cannot be reverted!'); if(r){location.reload()}">CLEAR</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3"><hr></td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <button onclick="calculate()">CALCULATE</button>
+            </td>
+        </tr>
+    </table>
+    <script src="main.js"></script>
+</body>
+</html>
