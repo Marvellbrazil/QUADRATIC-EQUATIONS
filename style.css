@@ -10,6 +10,7 @@ body{
 table{
     margin-top: 2dvh;
     text-align: center;
+    width: 5dvh;
 }
 
 button{
@@ -60,10 +61,4 @@ input{
 #follow:hover{
     font-size: 25px;
     transition-duration: 2s;
-}
-
-.header{
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
 }
