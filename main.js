@@ -109,13 +109,13 @@ function calculate() {
         c.value = root1.value * root2.value;
 
         if (b.value < 0 && c.value < 0){
-            quadraticEquations.innerHTML = `- x² - ${Math.abs(b.value)}x - ${Math.abs(c.value)} = 0`;
+            quadraticEquations.innerHTML = `x² - ${Math.abs(b.value)}x - ${Math.abs(c.value)} = 0`;
         } else if (b.value < 0){
-            quadraticEquations.innerHTML = `x² - ${Math.abs(b.value)}x + ${c.value} = 0`;
+            quadraticEquations.innerHTML = `x² - ${Math.abs(b.value)}x + ${Math.abs(c.value)} = 0`;
         } else if (c.value < 0){
-            quadraticEquations.innerHTML = `$x² + ${b.value}x - ${c.value} = 0`;
+            quadraticEquations.innerHTML = `x² + ${Math.abs(b.value)}x - ${Math.abs(c.value)} = 0`;
         } else {
-            quadraticEquations.innerHTML = `x² + ${b.value}x + ${c.value} = 0`;
+            quadraticEquations.innerHTML = `x² + ${Math.abs(b.value)}x + ${Math.abs(c.value)} = 0`;
         }
     }
 }
