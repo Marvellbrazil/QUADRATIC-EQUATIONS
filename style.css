@@ -61,3 +61,9 @@ input{
     font-size: 25px;
     transition-duration: 2s;
 }
+
+.header{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
